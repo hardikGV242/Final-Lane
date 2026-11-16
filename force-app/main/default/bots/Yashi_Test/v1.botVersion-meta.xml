@@ -4,8 +4,28 @@
     <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
     <botDialogs>
         <botSteps>
+            <botInvocation>
+                <invocationActionName>SvcCopilotTmpl__GetUserContact</invocationActionName>
+                <invocationActionType>flow</invocationActionType>
+                <invocationMappings>
+                    <parameterName>userId</parameterName>
+                    <type>Input</type>
+                    <variableName>Test</variableName>
+                    <variableType>ConversationVariable</variableType>
+                </invocationMappings>
+            </botInvocation>
+            <stepIdentifier>66916fb9-71bf-4180-bd01-e5220539965e</stepIdentifier>
+            <type>Invocation</type>
+        </botSteps>
+        <botSteps>
+            <botNavigation>
+                <botNavigationLinks>
+                    <targetBotDialog>Transfer_To_Agent</targetBotDialog>
+                </botNavigationLinks>
+                <type>Redirect</type>
+            </botNavigation>
             <stepIdentifier>9d709723-2114-4ac9-980b-cc2e4d964b0a</stepIdentifier>
-            <type>Wait</type>
+            <type>Navigation</type>
         </botSteps>
         <developerName>Check_my_order</developerName>
         <isPlaceholderDialog>false</isPlaceholderDialog>
@@ -178,6 +198,12 @@
         <dialog>No_Agent_Available</dialog>
         <type>TransferFailed</type>
     </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>Test</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Test</label>
+    </conversationVariables>
     <defaultStdObjForContactIdFltrEnabled>false</defaultStdObjForContactIdFltrEnabled>
     <entryDialog>Welcome</entryDialog>
     <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
